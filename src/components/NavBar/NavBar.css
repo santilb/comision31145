@@ -1,0 +1,13 @@
+.cart-widget {
+    position: static;
+    left: auto;
+}
+
+@media (min-width: 992px) {
+    .cart-widget {
+        position: absolute;
+        left: auto;
+        right: 0;
+        padding-right: 3%;
+    }
+}
