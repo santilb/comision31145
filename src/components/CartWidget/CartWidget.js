@@ -1,9 +1,6 @@
-import cart from './cart.png';
-
 const CartWidget = () => { 
     return(
-        <h4><img src={cart} width="30" height="30"/>4</h4>
-    )
+        <h5><img src={'images/cart.png'} width="30" height="30"/> 0</h5>
+        )
 }
-
 export default CartWidget

@@ -1,0 +1,18 @@
+.itemCount {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 222, 222);
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-radius: 20px;
+}
+
+button {
+    margin: 1rem 1rem 1rem 1rem;
+    border-radius: 10px;
+}
