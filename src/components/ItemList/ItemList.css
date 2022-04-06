@@ -1,0 +1,25 @@
+.itemList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 3%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+section {
+    margin-top: 2rem;
+    width:  15rem;
+    height: auto;
+    background-color: rgba(183, 181, 181, 0.303);
+    border-radius: 20px;
+}
+
+picture img {
+    height: 10rem;
+    width: 10rem;
+    margin: auto;
+    display: block;
+}
