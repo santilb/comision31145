@@ -3,6 +3,14 @@
     left: auto;
 }
 
+.navbar-brand img {
+    margin-right: 1rem;
+}
+
+.navbar-brand {
+    color: rgba(61, 226, 46, 0.798)!important;
+}
+
 @media (min-width: 992px) {
     .cart-widget {
         position: absolute;

@@ -1,8 +1,9 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemCount from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { useState } from 'react';
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
 
 const App = () => {
 
@@ -14,15 +15,17 @@ const App = () => {
 
   return (
     <div className="App">
-    <NavBar/>
-      <header className="container">
-      <ItemListContainer greeting="Bienvenido"/>
-        <h1>REACT - COMISION 31145</h1>  
-      </header>     
-      <div>
-      <button onClick={() => setShow(!show)}>{show ? 'Desmontar Contador' : 'Montar Contador'}</button>
-      { show ? <ItemCount stock={8} initial={0} onAdd={handleOnAdd}/> : null }
-      </div> 
+      <div className='container'>
+    <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route path ='/' element={<ItemListContainer greeting="Bienvenido"/>} />
+        <Route path='/category/:categoryId' element={<ItemListContainer />} />
+        <Route path ={`/detail/:productId`} element={<ItemDetailContainer/>} />
+        <Route path ='*' element={<h1>NOT FOUND 404</h1>}/>  
+      </Routes>
+    </BrowserRouter> 
+    </div>
     </div>
 );
 }

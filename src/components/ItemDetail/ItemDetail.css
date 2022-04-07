@@ -1,0 +1,22 @@
+.detalleItem {
+    background-color: rgb(60, 60, 60);
+    align-items: center;
+   
+}
+
+.detalleItem img {
+    width: 90%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.precio {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.col-md-6 p {
+    padding-top: 2rem;
+    text-align: left;
+}
+
