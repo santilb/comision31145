@@ -8,7 +8,8 @@
 }
 
 .navbar-brand {
-    color: rgba(61, 226, 46, 0.798)!important;
+    color: rgba(29, 247, 0, 0.798)!important;
+
 }
 
 @media (min-width: 992px) {
@@ -18,4 +19,8 @@
         right: 0;
         padding-right: 3%;
     }
+}
+
+.NavLink a {
+    text-decoration: none!important;
 }

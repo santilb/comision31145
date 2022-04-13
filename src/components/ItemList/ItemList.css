@@ -23,6 +23,7 @@ section {
     background-color: rgba(183, 181, 181, 0.303);
     border-radius: 20px;
     padding-bottom: 1rem ;
+    box-shadow: 1px 3px 10px #000000; 
 }
 
 picture img {

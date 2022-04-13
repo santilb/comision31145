@@ -13,10 +13,12 @@
 .precio {
     font-size: xx-large;
     font-weight: bold;
+    padding-bottom: 2rem;
 }
 
 .col-md-6 p {
     padding-top: 2rem;
-    text-align: left;
+    text-align: left!important;
+    
 }
 

@@ -15,6 +15,7 @@ const ItemDetail = ({ id, title, category, description, price, pictureUrl}) => {
                         <p>Categoria: {category}</p>
                         <p>Descripción: {description} </p>
                         <p className="precio">Precio: ${price}</p>
+                        <button>Agregar al carrito</button>
                     </div>
 
                 </div>
