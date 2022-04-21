@@ -1,10 +1,11 @@
 import './ItemDetail.css'
-import { useState } from 'react'
+import { useState,useContext  } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
+import CartContext from '../../Context/CartContext'
 
 
-const InputCount = ({onConfirm, stock, initial=1}) => {
+{/* const InputCount = ({onConfirm, stock, initial=1}) => {
     const [count, setCount] = useState(initial)
     const handleChange = (e) => {
         if(e.target.value <= stock) {
@@ -18,15 +19,18 @@ const InputCount = ({onConfirm, stock, initial=1}) => {
             <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
         </div>
     )
-}
+}*/}
 
 const ItemDetail = ({ id, title, category, description, price, pictureUrl, stock}) => {
 
-    const [quantity, setQuantity] = useState(0) 
+    const { addItem, isInCart } = useContext(CartContext)
 
     const handleAdd = (count) => {
-        console.log('Agregar al carrito')
-        setQuantity(count)
+        const productObj = {
+            id, title, price, quantity: count
+        }
+
+        addItem(productObj)
     }
 
     return (
@@ -43,7 +47,7 @@ const ItemDetail = ({ id, title, category, description, price, pictureUrl, stock
                         <p>Descripción: {description} </p>
                         <p>Stock: {stock} </p>
                         <p className="precio">Precio: ${price}</p>
-                        <ItemCount stock={stock} onAdd={handleAdd}/>
+                        { isInCart(id) ? <Link to='/cart'>Ir al carrito</Link> : <ItemCount stock={stock} onAdd={handleAdd}/> } 
                     </div>
                 </div>
 
