@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './ItemCount.css';
-import { Link } from 'react-router-dom'
 
-const ItemCount = ({initial, stock, onAdd}) => {
 
-    const [count, setCount] = useState (0)
+const ItemCount = ({initial=1, stock=0, onAdd}) => {
+
+    const [count, setCount] = useState (initial)
     
     const decrement = () => {
         count >0 ? setCount(count-1) : console.log("No resta en cero")

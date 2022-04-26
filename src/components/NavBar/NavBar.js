@@ -1,12 +1,14 @@
 import './NavBar.css';
+import CartContext from "../../Context/CartContext"
 import CartWidget from '../CartWidget/CartWidget'
-import { useState, useEffect } from 'react'
+import { useState, useEffect,useContext } from 'react'
 import { getCategories } from '../asynmock'
 import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
 
   const [categories, setCategories] = useState([])
+  const { getQuantity } = useContext(CartContext)
 
   useEffect(() => {
     getCategories().then(categories => {
@@ -40,7 +42,10 @@ const NavBar = () => {
       </li>
     </ul>
     <div className="cart-widget">
-    <CartWidget /> 
+    { 
+       getQuantity()==0 ?  <></> : <CartWidget />
+    } 
+     
     </div>
     </div>
 </nav>
