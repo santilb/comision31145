@@ -3,8 +3,13 @@
     left: auto;
 }
 
+.navbar { 
+    border-radius: 10px;
+}
+
 .navbar-brand img {
     margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .navbar-brand {

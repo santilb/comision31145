@@ -37,7 +37,7 @@ const NavBar = () => {
         <NavLink to="/" className="nav-link" href="#">Home</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink to="/" className="nav-link" href="#">La Empresa</NavLink>
+        <NavLink to="/empresa" className="nav-link" href="#">La Empresa</NavLink>
       </li>
       <li className="nav-item dropdown">
         <NavLink to="/" className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
