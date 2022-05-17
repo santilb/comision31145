@@ -13,7 +13,7 @@ const ItemCount = ({initial=1, stock=0, onAdd}) => {
     const increment = () => {    
         count < stock ? setCount(count+1) : console.log("No hay mas stock")
     }
-
+    
     return (
         <div className='itemCount'>
             <h3>Item 1</h3>

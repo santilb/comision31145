@@ -1,7 +1,6 @@
 .detalleItem {
     background-color: rgb(60, 60, 60);
     align-items: center;
-   
 }
 
 .detalleItem img {
@@ -14,6 +13,12 @@
     font-size: xx-large;
     font-weight: bold;
     padding-bottom: 2rem;
+    text-decoration: none;
+}
+
+a {
+    color: rgba(29, 247, 0, 0.798)!important;
+    font-size: large;
 }
 
 .col-md-6 p {
