@@ -39,7 +39,7 @@ const NavBar = () => {
       <li className="nav-item dropdown">
         <NavLink to="/" className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
           Productos </NavLink>
-        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <div className="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink ">
         <a className="dropdown-item" href="/">Todos</a>
         { categories.map(cat => <NavLink className="dropdown-item" key={cat.id} to={`/category/${cat.id}`}
           >{cat.description}</NavLink>)}
